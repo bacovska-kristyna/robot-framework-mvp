@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2 (Python 3.11.9 on win32)" generated="2025-01-22T17:43:49.694694" rpa="false" schemaversion="5">
+<suite id="s1" name="TC1" source="C:\Users\Asus\PycharmProjects\Test_AddToCart\TestCases\TC1.robot">
+<test id="s1-t1" name="AddItemToCart" line="9">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-01-22T17:43:50.678909" level="INFO">Opening browser 'Chrome' to base url 'https://www.rollerderbyhouse.eu/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-01-22T17:43:50.678909" elapsed="19.628478"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-01-22T17:44:10.317041" level="INFO">${cookies} = xpath://*[@class="cc_banner cc_container cc_container--open"]/*[@class="cc_btn cc_btn_accept_all"]</msg>
+<var>${cookies}</var>
+<arg>xpath://*[@class="cc_banner cc_container cc_container--open"]/*[@class="cc_btn cc_btn_accept_all"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-01-22T17:44:10.316039" elapsed="0.001002"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${cookies}</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-01-22T17:44:10.320100" elapsed="0.160748"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-22T17:44:10.480848" level="INFO">Clicking element 'xpath://*[@class="cc_banner cc_container cc_container--open"]/*[@class="cc_btn cc_btn_accept_all"]'.</msg>
+<arg>${cookies}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-22T17:44:10.480848" elapsed="0.913316"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-01-22T17:44:11.400164" level="INFO">${"search_box"} = id:search</msg>
+<var>${"search_box"}</var>
+<arg>id:search</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-01-22T17:44:11.399166" elapsed="0.000998"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-22T17:44:11.402165" level="INFO">Typing text 'chaya onyx' into text field 'id:search'.</msg>
+<arg>${"search_box"}</arg>
+<arg>chaya onyx</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-22T17:44:11.401164" elapsed="0.552991"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-22T17:44:11.964272" level="INFO">Clicking element 'xpath://*[@value="Search"]'.</msg>
+<arg>xpath://*[@value="Search"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-22T17:44:11.964272" elapsed="3.005280"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-22T17:44:14.971549" level="INFO">Clicking element 'xpath://*[@title="CHAYA Rollerskates Onyx"]'.</msg>
+<arg>xpath://*[@title="CHAYA Rollerskates Onyx"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-22T17:44:14.971549" elapsed="8.809192"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2025-01-22T17:44:23.797506" level="INFO">Selecting options from selection list 'id:product[0][selectoption1]' by value 1753.</msg>
+<arg>id:product[0][selectoption1]</arg>
+<arg>1753</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-01-22T17:44:23.797506" elapsed="0.485464"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-22T17:44:24.282970" level="INFO">Clicking element 'xpath://*[@id="tobasketform"]/button'.</msg>
+<arg>xpath://*[@id="tobasketform"]/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-22T17:44:24.282970" elapsed="3.259692"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-22T17:44:30.550126" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-22T17:44:27.547590" elapsed="3.002536"/>
+</kw>
+<status status="PASS" start="2025-01-22T17:43:50.678909" elapsed="39.871217"/>
+</test>
+<status status="PASS" start="2025-01-22T17:43:49.694694" elapsed="40.855432"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="TC1" id="s1" pass="1" fail="0" skip="0">TC1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
